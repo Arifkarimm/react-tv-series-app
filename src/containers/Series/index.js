@@ -6,13 +6,16 @@ class Series extends Component {
     super(props);
 
     this.state = {
-      movieList: []
+      movieList: [],
+      searchTerm: "",
     }
+
+    this.fetchSearcMovieStories = this.fetchSearcMovieStories.bind(this);
   }
 
 
-  	componentDidMount(){
-	    fetch(`http://api.tvmaze.com/search/shows?q=girls`)
+  	fetchSearcMovieStories(e){
+	    fetch(`http://api.tvmaze.com/search/shows?q=${e.target.value}`)
 	    .then(response => response.json())
 	    .then(result => this.setState({ movieList: result}))
   	}
@@ -21,7 +24,10 @@ class Series extends Component {
 	render(){
 		return(
 			<div>
-			The length of movie {this.state.movieList.length}
+			
+
+			<input type="text" onChange={this.fetchSearcMovieStories} />
+
 			<SeriesList list={this.state.movieList} />
 			</div>
 			
