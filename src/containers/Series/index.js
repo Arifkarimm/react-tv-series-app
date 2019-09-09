@@ -36,15 +36,15 @@ class Series extends Component {
 				</div>
 
 
-			{!isDataFetch && movieList.length === 0 && searchTerm.trim() === "" && (
-				<p>Please enter the movie list keyword</p>
-			)}
+				{!isDataFetch && movieList.length === 0 && searchTerm.trim() === "" && (
+					<p>Please enter the movie list keyword</p>
+				)}
 
-			{!isDataFetch && movieList.length === 0 && searchTerm.trim() !== "" && (
-				<p>there is no such kind of movie in this list</p>
-			)}
+				{!isDataFetch && movieList.length === 0 && searchTerm.trim() !== "" && (
+					<p>there is no such kind of movie in this list</p>
+				)}
 
-			{!isDataFetch && <SeriesList list={movieList} /> }
+				{!isDataFetch && <SeriesList list={movieList} /> }
 
 			
 			</div>
