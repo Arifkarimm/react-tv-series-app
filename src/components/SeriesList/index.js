@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const SeriesListItem = ({movieItem}) => {
 	return (
 		<li>
-			<Link to={`/movieItem/:id`}>{movieItem.show.name}</Link>
+			<Link to={`/movieItem/${movieItem.show.id}`}>{movieItem.show.name}</Link>
 		</li>
 	)
 }
