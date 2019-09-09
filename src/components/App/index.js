@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Intro from "../Intro";
 
 class App extends Component {
   render(){
@@ -9,17 +10,13 @@ class App extends Component {
           <p>TV Series App</p>
         </header>
 
-      <Intro messsage="Here you can find your favourite TV Series App" />       
+        <Intro messsage="Here you can find your favourite TV Series App" />       
 
       </div>
     );
 }
 }
 
-const Intro = (props) => (
-        <div className="App-Intro">
-          {props.messsage}
-        </div>
-  )
+
 
 export default App;
