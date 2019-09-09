@@ -1,4 +1,5 @@
 import React,{ Component } from "react";
+import Loader from "../../components/Loader";
 
 class SingleSeriesList extends Component {
 	constructor(props) {
@@ -22,6 +23,7 @@ class SingleSeriesList extends Component {
 		const { singleMovieItem } = this.state;
 		return(
 			<div>
+				{singleMovieItem === null && <Loader />}
 				{singleMovieItem !== null && (
 					<div>
 						<p>{singleMovieItem.name}</p>

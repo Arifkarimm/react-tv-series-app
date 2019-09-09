@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SeriesList from "../../components/SeriesList";
+import Loader from "../../components/Loader";
 
 class Series extends Component {
 	constructor(props) {
@@ -43,6 +44,8 @@ class Series extends Component {
 				{!isDataFetch && movieList.length === 0 && searchTerm.trim() !== "" && (
 					<p>there is no such kind of movie in this list</p>
 				)}
+
+				{isDataFetch && <Loader />}
 
 				{!isDataFetch && <SeriesList list={movieList} /> }
 
